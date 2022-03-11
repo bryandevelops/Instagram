@@ -12,11 +12,16 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var currentUser = PFUser.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if currentUser != nil {
+            performSegue(withIdentifier: "loginSegue", sender: nil)
+        }
     }
     
     @IBAction func onSignIn(_ sender: Any) {
@@ -26,6 +31,8 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username, password: password) { user, error in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.usernameTextField.text = ""
+                self.passwordTextField.text = ""
             } else {
                 let alert = UIAlertController(title: "Uh Oh!", message: "\(error?.localizedDescription ?? "")", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -43,7 +50,8 @@ class LoginViewController: UIViewController {
         user.signUpInBackground { success, error in
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                print("success")
+                self.usernameTextField.text = ""
+                self.passwordTextField.text = ""
             } else {
                 let alert = UIAlertController(title: "Uh Oh!", message: "\(error?.localizedDescription ?? "")", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))

@@ -14,6 +14,7 @@
 		85A6B5F327DA787600018A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A6B5F127DA787600018A5A /* LaunchScreen.storyboard */; };
 		85DD3E2627DAA754005DC8B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E2527DAA754005DC8B9 /* LoginViewController.swift */; };
 		85DD3E2827DAA7ED005DC8B9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E2727DAA7ED005DC8B9 /* FeedViewController.swift */; };
+		85DD3E2A27DAC503005DC8B9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E2927DAC503005DC8B9 /* CameraViewController.swift */; };
 		960F876F070FAD20CE4BD612 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEE7EE3C97917329068B762 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		85A6B5F427DA787600018A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85DD3E2527DAA754005DC8B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85DD3E2727DAA7ED005DC8B9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		85DD3E2927DAC503005DC8B9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				85DD3E2527DAA754005DC8B9 /* LoginViewController.swift */,
 				85DD3E2727DAA7ED005DC8B9 /* FeedViewController.swift */,
+				85DD3E2927DAC503005DC8B9 /* CameraViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85DD3E2627DAA754005DC8B9 /* LoginViewController.swift in Sources */,
+				85DD3E2A27DAC503005DC8B9 /* CameraViewController.swift in Sources */,
 				85A6B5E727DA787500018A5A /* AppDelegate.swift in Sources */,
 				85DD3E2827DAA7ED005DC8B9 /* FeedViewController.swift in Sources */,
 				85A6B5E927DA787500018A5A /* SceneDelegate.swift in Sources */,

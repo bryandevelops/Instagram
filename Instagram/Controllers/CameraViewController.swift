@@ -1,24 +1,19 @@
 //
-//  FeedViewController.swift
+//  CameraViewController.swift
 //  Instagram
 //
 //  Created by Bryan Santos on 3/10/22.
 //
 
 import UIKit
-import Parse
 
-class FeedViewController: UIViewController {
+class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func onSignOut(_ sender: Any) {
-        PFUser.logOut()
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 
