@@ -15,6 +15,7 @@
 		85DD3E2627DAA754005DC8B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E2527DAA754005DC8B9 /* LoginViewController.swift */; };
 		85DD3E2827DAA7ED005DC8B9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E2727DAA7ED005DC8B9 /* FeedViewController.swift */; };
 		85DD3E2A27DAC503005DC8B9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E2927DAC503005DC8B9 /* CameraViewController.swift */; };
+		85DD3E4D27DB0134005DC8B9 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD3E4C27DB0134005DC8B9 /* PostTableViewCell.swift */; };
 		960F876F070FAD20CE4BD612 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEE7EE3C97917329068B762 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		85DD3E2527DAA754005DC8B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85DD3E2727DAA7ED005DC8B9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		85DD3E2927DAC503005DC8B9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		85DD3E4C27DB0134005DC8B9 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		85A6B5E527DA787500018A5A /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				85DD3E4B27DB0110005DC8B9 /* Views */,
 				85DD3E2427DAA73B005DC8B9 /* Controllers */,
 				85A6B5E627DA787500018A5A /* AppDelegate.swift */,
 				85A6B5E827DA787500018A5A /* SceneDelegate.swift */,
@@ -103,6 +106,14 @@
 				85DD3E2927DAC503005DC8B9 /* CameraViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85DD3E4B27DB0110005DC8B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85DD3E4C27DB0134005DC8B9 /* PostTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				85A6B5E727DA787500018A5A /* AppDelegate.swift in Sources */,
 				85DD3E2827DAA7ED005DC8B9 /* FeedViewController.swift in Sources */,
 				85A6B5E927DA787500018A5A /* SceneDelegate.swift in Sources */,
+				85DD3E4D27DB0134005DC8B9 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

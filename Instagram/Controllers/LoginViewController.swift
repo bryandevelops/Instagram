@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if PFUser.current() != nil {
             performSegue(withIdentifier: "loginSegue", sender: nil)
         }
