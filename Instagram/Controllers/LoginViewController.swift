@@ -12,14 +12,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    var currentUser = PFUser.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if currentUser != nil {
+        if PFUser.current() != nil {
             performSegue(withIdentifier: "loginSegue", sender: nil)
         }
     }
