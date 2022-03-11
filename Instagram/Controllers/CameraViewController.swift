@@ -31,6 +31,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true, completion: nil)
     }
     
+    @IBAction func onBarButtonImageTap(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
     @IBAction func onSubmit(_ sender: Any) {
     }
     
@@ -41,6 +50,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         cameraImageView.image = scaledImage
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

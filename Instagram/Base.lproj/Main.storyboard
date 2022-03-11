@@ -118,7 +118,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="lPI-hO-9D7" userLabel="Camera">
                             <connections>
-                                <segue destination="CaK-Us-SjO" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Buj-Ry-Ifl"/>
+                                <segue destination="vuO-dP-RC1" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Buj-Ry-Ifl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -162,6 +162,18 @@
                         <viewLayoutGuide key="safeArea" id="wV1-6Z-Joh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="403-Ga-rl7">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ayO-LO-2rr">
+                            <connections>
+                                <action selector="onCancel:" destination="CaK-Us-SjO" id="Or6-kP-XCJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Albums" image="photo.on.rectangle.angled" catalog="system" id="FJm-MN-VHu">
+                            <connections>
+                                <action selector="onBarButtonImageTap:" destination="CaK-Us-SjO" id="vc9-LS-PWh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cameraImageView" destination="9cq-Fx-nLf" id="w0E-wq-Upi"/>
                         <outlet property="captionTextField" destination="6CI-ue-Lww" id="m4u-Io-okf"/>
@@ -174,7 +186,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2327.536231884058" y="93.75"/>
+            <point key="canvasLocation" x="1606" y="777"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fSW-fN-anA">
@@ -194,11 +206,30 @@
             </objects>
             <point key="canvasLocation" x="872" y="94"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gUc-AW-SXV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vuO-dP-RC1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Ka-vD-fwz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CaK-Us-SjO" kind="relationship" relationship="rootViewController" id="zDc-vE-WsH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWN-s2-A2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="777"/>
+        </scene>
     </scenes>
     <resources>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
