@@ -54,8 +54,8 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Nu-Td-bwg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceZ-xx-yTH" userLabel="Sign In Button">
-                                <rect key="frame" x="79" y="518" width="68" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceZ-xx-yTH" userLabel="Sign In Button">
+                                <rect key="frame" x="79" y="518" width="75" height="31"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign In" cornerStyle="large">
@@ -77,12 +77,15 @@
                             <constraint firstItem="huk-ef-jOF" firstAttribute="top" secondItem="76f-3j-fXz" secondAttribute="bottom" constant="8" symbolic="YES" id="AaI-Da-t1s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EHA-Yv-xig" secondAttribute="trailing" constant="79" id="Aiv-8P-fdH"/>
                             <constraint firstItem="exA-fh-jIU" firstAttribute="leading" secondItem="huk-ef-jOF" secondAttribute="leading" id="EQb-xn-TgI"/>
+                            <constraint firstItem="HlC-Tq-959" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ceZ-xx-yTH" secondAttribute="trailing" constant="8" symbolic="YES" id="IjD-W2-SaV"/>
                             <constraint firstItem="76f-3j-fXz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="157" id="Nih-z8-NwD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="huk-ef-jOF" secondAttribute="trailing" symbolic="YES" id="QiG-Xj-dJj"/>
                             <constraint firstItem="exA-fh-jIU" firstAttribute="top" secondItem="huk-ef-jOF" secondAttribute="bottom" constant="8" symbolic="YES" id="WUH-Gg-9t8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="exA-fh-jIU" secondAttribute="trailing" constant="79" id="XBt-DB-L6M"/>
                             <constraint firstItem="Qhj-EL-4fc" firstAttribute="leading" secondItem="huk-ef-jOF" secondAttribute="leading" id="atM-Cr-dvz"/>
                             <constraint firstItem="ceZ-xx-yTH" firstAttribute="top" secondItem="EHA-Yv-xig" secondAttribute="bottom" constant="46" id="i7X-7y-uz3"/>
                             <constraint firstItem="Qhj-EL-4fc" firstAttribute="top" secondItem="exA-fh-jIU" secondAttribute="bottom" constant="23" id="joN-QG-il7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qhj-EL-4fc" secondAttribute="trailing" symbolic="YES" id="nFF-yx-cCX"/>
                             <constraint firstItem="huk-ef-jOF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="pm0-F6-RMZ"/>
                             <constraint firstItem="EHA-Yv-xig" firstAttribute="leading" secondItem="huk-ef-jOF" secondAttribute="leading" id="q3N-J4-BXu"/>
                             <constraint firstItem="ceZ-xx-yTH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="qbk-fL-8wR"/>
@@ -112,11 +115,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qgr-CR-JOI">
                         <barButtonItem key="leftBarButtonItem" title="Sign Out" id="iXX-hU-ycD">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onSignOut:" destination="HCJ-EW-rHm" id="u6S-fm-Fgd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="lPI-hO-9D7" userLabel="Camera">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="vuO-dP-RC1" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Buj-Ry-Ifl"/>
                             </connections>
@@ -135,25 +140,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="9cq-Fx-nLf">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="9cq-Fx-nLf">
                                 <rect key="frame" x="20" y="88" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="oXP-K3-RYE" appends="YES" id="YSx-cd-Bra"/>
                                 </connections>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6CI-ue-Lww">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6CI-ue-Lww">
                                 <rect key="frame" x="20" y="471" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="QC6-XV-EbD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="060-j8-fQR" userLabel="Submit Button">
-                                <rect key="frame" x="20" y="513" width="374" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="060-j8-fQR" userLabel="Submit Button">
+                                <rect key="frame" x="80" y="543" width="254" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="qCk-fz-Iyn"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onSubmit:" destination="CaK-Us-SjO" eventType="touchUpInside" id="OdZ-qA-kNv"/>
                                 </connections>
@@ -161,14 +174,27 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wV1-6Z-Joh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="060-j8-fQR" firstAttribute="leading" secondItem="wV1-6Z-Joh" secondAttribute="leading" constant="80" id="0Vf-RU-NGF"/>
+                            <constraint firstItem="9cq-Fx-nLf" firstAttribute="top" secondItem="wV1-6Z-Joh" secondAttribute="top" id="7HG-6Y-p2N"/>
+                            <constraint firstItem="wV1-6Z-Joh" firstAttribute="trailing" secondItem="9cq-Fx-nLf" secondAttribute="trailing" constant="19" id="9rb-1t-TuU"/>
+                            <constraint firstItem="9cq-Fx-nLf" firstAttribute="leading" secondItem="wV1-6Z-Joh" secondAttribute="leading" constant="20" id="PPj-e8-DLg"/>
+                            <constraint firstItem="6CI-ue-Lww" firstAttribute="top" secondItem="9cq-Fx-nLf" secondAttribute="bottom" constant="8" symbolic="YES" id="gHk-3b-OC3"/>
+                            <constraint firstItem="wV1-6Z-Joh" firstAttribute="trailing" secondItem="6CI-ue-Lww" secondAttribute="trailing" constant="20" id="kJ1-4v-7YI"/>
+                            <constraint firstItem="6CI-ue-Lww" firstAttribute="leading" secondItem="wV1-6Z-Joh" secondAttribute="leading" constant="20" id="mnp-FH-x9L"/>
+                            <constraint firstItem="wV1-6Z-Joh" firstAttribute="trailing" secondItem="060-j8-fQR" secondAttribute="trailing" constant="80" id="pbl-yR-lAQ"/>
+                            <constraint firstItem="060-j8-fQR" firstAttribute="top" secondItem="6CI-ue-Lww" secondAttribute="bottom" constant="38" id="uNX-KN-vco"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="403-Ga-rl7">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="ayO-LO-2rr">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onCancel:" destination="CaK-Us-SjO" id="Or6-kP-XCJ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Albums" image="photo.on.rectangle.angled" catalog="system" id="FJm-MN-VHu">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onBarButtonImageTap:" destination="CaK-Us-SjO" id="vc9-LS-PWh"/>
                             </connections>
@@ -186,7 +212,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1606" y="777"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="776.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fSW-fN-anA">

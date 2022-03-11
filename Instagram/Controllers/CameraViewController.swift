@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,6 +16,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print()
     }
     
     @IBAction func onCameraImageTap(_ sender: Any) {
@@ -41,6 +43,30 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onSubmit(_ sender: Any) {
+        let post = PFObject(className: "Posts")
+        let imageData = cameraImageView.image?.pngData()
+        let imageName = ((cameraImageView.image?.accessibilityIdentifier) ?? "") as String
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        
+        if imageName != "image_placeholder" {
+            post["caption"] = captionTextField.text
+            post["author"] = PFUser.current()
+            post["image"] = file
+            
+            post.saveInBackground { success, error in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                    print("success!")
+                } else {
+                    print("\(error?.localizedDescription ?? "")")
+                }
+            }
+        } else {
+            let alert = UIAlertController(title: "Uh Oh!", message: "you haven't chosen a photo yet", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
