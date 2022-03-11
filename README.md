@@ -1,6 +1,6 @@
 # Instagram - Part I
 
-This is an Instagram clone with a custom Parse backend that allows a user to post photos and view a global photos feed.
+This is an Instagram clone with a custom Parse backend that allows a user to sign up or sign in, post photos with captions, and view a global photos feed.
 
 Time spent: **15** hours spent in total
 
@@ -23,4 +23,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/bryandevelops/Instagram/blob/master/demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
