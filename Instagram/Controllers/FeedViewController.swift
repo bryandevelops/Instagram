@@ -12,19 +12,26 @@ import AlamofireImage
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
     var posts = [PFObject]()
+    let feedRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        feedRefreshControl.addTarget(self, action: #selector(getPosts), for: .valueChanged)
+        tableView.refreshControl = feedRefreshControl
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        getPosts()
+    }
+    
+    @objc func getPosts() {
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
         query.limit = 20
@@ -33,8 +40,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
+                self.run(after: 1) {
+                       self.feedRefreshControl.endRefreshing()
+                }
             }
         }
+    }
+    
+    func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
     }
     
     @IBAction func onSignOut(_ sender: Any) {
