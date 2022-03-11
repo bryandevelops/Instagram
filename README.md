@@ -17,10 +17,14 @@ The following **required** functionality is completed:
 The following **bonus** features are implemented:
 
 - [x] User can pull to refresh. (1pt)
-- [ ] User can load past posts infinitely. (2pts)
+- [x] User can load past posts infinitely. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
+- The user is unable to sign in without the correct username and password. The user is also unable to sign up without both a username and password.
+- The user is able to scroll infinitely through a global feed of photos uploaded by all users. They can also pull to refresh to see any new photos posted.
+- The user is able to submit a photo with an optional caption and are prompted with an alert when they try to do otherwise.
 
 <img src='https://github.com/bryandevelops/Instagram/blob/master/demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
