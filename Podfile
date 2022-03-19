@@ -10,5 +10,6 @@ target 'Instagram' do
   pod 'AlamofireImage'
   pod 'CameraManager', '~> 5.1'
   pod 'RSKPlaceholderTextView'
+  pod 'MessageInputBar' 
 
 end

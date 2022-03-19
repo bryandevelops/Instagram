@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850CCC6827E53139006B1411 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850CCC6727E53139006B1411 /* CommentTableViewCell.swift */; };
 		85A6B5E727DA787500018A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A6B5E627DA787500018A5A /* AppDelegate.swift */; };
 		85A6B5E927DA787500018A5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A6B5E827DA787500018A5A /* SceneDelegate.swift */; };
 		85A6B5EE27DA787500018A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A6B5EC27DA787500018A5A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		2FEE7EE3C97917329068B762 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6131B585879785DC49FDB0A8 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		6A7374AA50F0EBDCF0E7F0EE /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
+		850CCC6727E53139006B1411 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		85A6B5E327DA787500018A5A /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A6B5E627DA787500018A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85A6B5E827DA787500018A5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				85DD3E4C27DB0134005DC8B9 /* PostTableViewCell.swift */,
+				850CCC6727E53139006B1411 /* CommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				85DD3E2A27DAC503005DC8B9 /* CameraViewController.swift in Sources */,
 				85A6B5E727DA787500018A5A /* AppDelegate.swift in Sources */,
 				85DD3E2827DAA7ED005DC8B9 /* FeedViewController.swift in Sources */,
+				850CCC6827E53139006B1411 /* CommentTableViewCell.swift in Sources */,
 				85A6B5E927DA787500018A5A /* SceneDelegate.swift in Sources */,
 				85DD3E4D27DB0134005DC8B9 /* PostTableViewCell.swift in Sources */,
 			);
