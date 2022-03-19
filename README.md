@@ -22,6 +22,9 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+- The user is able to sign out or have their login status persist across app restarts
+- The user is able to read comments added to any posts as well as make their own
+
 <img src='https://github.com/bryandevelops/Instagram/blob/master/demo2.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 # Instagram - Part I
