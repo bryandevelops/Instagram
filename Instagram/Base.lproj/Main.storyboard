@@ -196,7 +196,7 @@
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="j1L-tr-ZFX" secondAttribute="bottom" constant="8" id="uJt-NL-oZd"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <connections>
                                             <outlet property="commentLabel" destination="9gX-Vc-acj" id="d9d-pR-oRe"/>
                                             <outlet property="usernameLabel" destination="j1L-tr-ZFX" id="DaG-4j-cP0"/>
