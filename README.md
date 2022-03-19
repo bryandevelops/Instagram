@@ -2,7 +2,7 @@
 
 This is an Instagram clone with a custom Parse backend that allows a user to sign up or sign in, post photos with captions, view a global photos feed, as well as add comments.
 
-Time spent: **10** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
